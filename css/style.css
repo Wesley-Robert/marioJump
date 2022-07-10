@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.game-board{
+    width: 100%;
+    height: 625px;
+    border-bottom: 35px solid rgb(28, 146, 28);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+.jump{
+    animation: jump-mario 500ms ease-out;
+}
+@keyframes jump-mario{
+    0%{
+        bottom: 0;
+    }
+    30%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    70%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 10s infinite linear;
+}
+@keyframes clouds-animation {
+    from{
+        right: -50%;
+    }
+    to{
+        right: 100%;
+    }
+}
+.gameOver{
+    position: absolute;
+    left: 36%;
+    top: 200px;
+    opacity: 0;
+}
+.gameOverAnimation{
+    animation: game-over 2.5s linear;
+}
+@keyframes game-over{
+    0%{
+        left: 100%;
+        top: 200px;
+        opacity: 0;
+    }
+    20%{
+        top: 100px;
+    }
+    40%{
+        top: 250px;
+    }
+    60%{
+        top: 100px;
+    }
+    80%{
+        top: 250px;
+    }
+    100%{
+        left: 38%;
+        top: 200px;
+        opacity: 1;
+    }
+}
+.reload{
+    position: absolute;
+    left: 38%;
+    top: 70%;
+    font-size: 2em;
+    font-family: fantasy;
+    opacity: 0;
+}
+.reloadPos{
+    animation: reloads 1s;
+}
+@keyframes reloads{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.superMario{
+    position: absolute;
+    width: 500px;
+    left: 24.5%;
+    top: 20%;
+    opacity: 1;
+}
+.superMario1{
+    animation: superMarios 1s linear;
+}
+@keyframes superMarios{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.pontuacao{
+    position: absolute;
+    font-size: 1.5em;
+    font-family: fantasy;
+    top: 1%;
+    left: 1%;
+}
