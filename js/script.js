@@ -1,3 +1,4 @@
+window.alert('Precione "T" para iniciar o jogo...\n E boa sorte.')
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const gameOver = document.querySelector('.gameOver');
